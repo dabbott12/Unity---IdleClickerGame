@@ -424,7 +424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 567834331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497093376}
+        m_TargetAssemblyTypeName: ClickManager, Assembly-CSharp
+        m_MethodName: OnBuyAutoClicker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &567834331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,7 +673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold: 500'
+  m_text: 'Gold: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -748,6 +760,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1497093374}
   - component: {fileID: 1497093373}
+  - component: {fileID: 1497093375}
+  - component: {fileID: 1497093376}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -771,6 +785,8 @@ MonoBehaviour:
   - {fileID: 2890777522581421708, guid: 8fc3991deb39acf449c963819d289920, type: 3}
   - {fileID: 2598025734180727604, guid: 5e3ffdc7b8cc0e641a0d75491754dd5e, type: 3}
   - {fileID: 7921387649096874367, guid: b35fc7d747dcbaa4ebf984c5028863d4, type: 3}
+  currentEnemy: {fileID: 0}
+  canvas: {fileID: 1820047255}
 --- !u!4 &1497093374
 Transform:
   m_ObjectHideFlags: 0
@@ -785,6 +801,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497093375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497093372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c461adf96eed5854c8a5d0def5cc982a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  goldText: {fileID: 1278094812}
+  backgrounds:
+  - {fileID: 21300000, guid: 4cc283d34066fab40afba0ca7d6863a1, type: 3}
+  - {fileID: 21300000, guid: 7cef103f1e4748345b0168c9c14d3758, type: 3}
+  - {fileID: 21300000, guid: 9886eb13e9e365144b0d69b941e44b30, type: 3}
+  - {fileID: 21300000, guid: f0adce1301283cb4dbd9940659ad90f3, type: 3}
+  - {fileID: 21300000, guid: 50904c16fdf2dad469d365762b897055, type: 3}
+  backgroundImage: {fileID: 1242275926}
+--- !u!114 &1497093376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497093372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec1cffd0c605f51458f97f8391beedee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoClickersLastTime: []
+  autoClickerPrice: 1
 --- !u!224 &1636390040 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7921387649096874352, guid: b35fc7d747dcbaa4ebf984c5028863d4, type: 3}

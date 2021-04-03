@@ -23,4 +23,13 @@ public class EnemyManager : MonoBehaviour
 
         currentEnemy = obj.GetComponent<Enemy>();
     }
+
+    public void DefeatEnemy(GameObject enemy)
+    {
+        Destroy(enemy);
+
+        CreateNewEnemy();
+
+        GameManager.instance.BackgroundCheck();
+    }
 }
