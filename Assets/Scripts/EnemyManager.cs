@@ -30,6 +30,7 @@ public class EnemyManager : MonoBehaviour
 
         CreateNewEnemy();
 
+        GameManager.instance.IncreaseEnemyDefeatedCount(1);
         GameManager.instance.BackgroundCheck();
     }
 }

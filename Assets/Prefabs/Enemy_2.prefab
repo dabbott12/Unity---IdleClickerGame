@@ -17,15 +17,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2598025734180727610, guid: 5e3ffdc7b8cc0e641a0d75491754dd5e, type: 3}
       propertyPath: maxHP
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2598025734180727610, guid: 5e3ffdc7b8cc0e641a0d75491754dd5e, type: 3}
       propertyPath: currentHP
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2598025734180727610, guid: 5e3ffdc7b8cc0e641a0d75491754dd5e, type: 3}
       propertyPath: goldToGive
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2598025734180727611, guid: 5e3ffdc7b8cc0e641a0d75491754dd5e, type: 3}
       propertyPath: m_Pivot.x

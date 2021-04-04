@@ -7,7 +7,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int gold;
+    public int enemiesDefeatedCount;
     public TextMeshProUGUI goldText;
+    public TextMeshProUGUI enemiesDefeatedCountText;
 
     public Sprite[] backgrounds;
     private int currentBackground;
@@ -21,19 +23,28 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         enemiesUntilBackgroundChange = 5;
+        enemiesDefeatedCount = 0;
     }
 
     public void AddGold(int amount)
     {
         gold += amount;
 
-        goldText.text = "Gold: " + gold.ToString();
+        UpdateUI();
     }
 
     public void TakeGold(int amount)
     {
         gold -= amount;
-        goldText.text = "Gold:" + gold.ToString();
+
+        UpdateUI();
+    }
+
+    public void IncreaseEnemyDefeatedCount(int amount)
+    {
+        enemiesDefeatedCount += amount;
+
+        UpdateUI();
     }
 
     public void BackgroundCheck()
@@ -53,5 +64,11 @@ public class GameManager : MonoBehaviour
 
             backgroundImage.sprite = backgrounds[currentBackground];
         }
+    }
+
+    public void UpdateUI()
+    {
+        goldText.text = "Gold: " + gold.ToString();
+        enemiesDefeatedCountText.text = "Enemies Defeated: " + enemiesDefeatedCount.ToString();
     }
 }

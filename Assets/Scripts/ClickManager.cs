@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ClickManager : MonoBehaviour
 {
     public List<float> autoClickersLastTime = new List<float>();
     public int autoClickerPrice;
+    public TextMeshProUGUI autoClickerText;
 
     private void Update()
     {
@@ -27,6 +29,8 @@ public class ClickManager : MonoBehaviour
             GameManager.instance.TakeGold(autoClickerPrice);
 
             autoClickersLastTime.Add(Time.time);
+
+            autoClickerText.text = "x " + autoClickersLastTime.Count.ToString();
         }
     }
 }
